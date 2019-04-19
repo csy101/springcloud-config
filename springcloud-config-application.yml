@@ -2,6 +2,7 @@ spring:
     profiles:
         active: dev         #激活开发环境配置 
 
+---
 server:
     port: 4001              #端口号
 spring:
@@ -9,7 +10,7 @@ spring:
     application: 
         name: springcloud-config-dev
         
-        
+---        
 server:
     port: 4002  #端口号
 spring:
