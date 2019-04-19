@@ -1,19 +1,19 @@
- spring:
+spring:
   profiles:
-   active: dev         #激活开发环境配置 
+    active: dev         #激活开发环境配置 
 
 --- 
- server:
+server:
   port: 4001              #端口号
- spring:
+spring:
   profiles: dev
-   application: 
-    name: springcloud-config-dev
+    application: 
+      name: springcloud-config-dev
         
 ---     
- server:
+server:
   port: 4002  #端口号
- spring:
+spring:
   profiles: prod #生产环境
-   application:
-    name: springcloud-config-prod
+    application:
+      name: springcloud-config-prod
