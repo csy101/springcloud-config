@@ -1,28 +1,28 @@
 spring:
-    profiles:
-        active: dev         #激活开发环境配置 
-        
+  profiles:
+    active: dev         #激活开发环境配置 
+---        
 server:
-    port: 8001              #端口号
+  port: 8001              #端口号
 mybatis:
-    config-location: classpath:mybatis/mybatis.cfg.xml
-    type-aliases-package: com.dfxt.entity
-    mapper-locations: classpath:mybatis/mapper/**/*.xml   
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.dfxt.entity
+  mapper-locations: classpath:mybatis/mapper/**/*.xml   
 spring:
-    profiles: dev
-    application: 
-        name: springcloud-config-product    #服务名
-    datasource:
-      type: com.alibaba.druid.pool.DruidDataSource   
-      driver-class-name: com.mysql.jdbc.Driver   
-      url: jdbc:mysql://127.0.0.1:3306/springcloud_db01?serverTimezone=GMT%2B8
-      username: root
-      password: root
-      dbcp2:
-        min-idle: 5   #数据库连接池的最小维持连接数
-        initial-size: 5 #初始化连接数
-        max-total: 5  #最大连接数
-        max-wait-millis: 150  #等待连接获取的最大超时时间
+  profiles: dev
+  application: 
+    name: springcloud-config-product    #服务名
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource   
+    driver-class-name: com.mysql.jdbc.Driver   
+    url: jdbc:mysql://127.0.0.1:3306/springcloud_db01?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    dbcp2:
+      min-idle: 5   #数据库连接池的最小维持连接数
+      initial-size: 5 #初始化连接数
+      max-total: 5  #最大连接数
+      max-wait-millis: 150  #等待连接获取的最大超时时间
         
 eureka:
   client:
@@ -35,28 +35,28 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${server.port}  #这个配置是把路径中含有的主机名给换掉
     prefer-ip-address: true #这个配置可以让访问路径显示ip地址
-    
+---  
 server:
-    port: 8001              #端口号
+  port: 8001              #端口号
 mybatis:
-    config-location: classpath:mybatis/mybatis.cfg.xml
-    type-aliases-package: com.dfxt.entity
-    mapper-locations: classpath:mybatis/mapper/**/*.xml   
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.dfxt.entity
+  mapper-locations: classpath:mybatis/mapper/**/*.xml   
 spring:
-    profiles: prod  #生产环境
-    application: 
-        name: springcloud-config-product    #服务名
-    datasource:
-      type: com.alibaba.druid.pool.DruidDataSource   
-      driver-class-name: com.mysql.jdbc.Driver   
-      url: jdbc:mysql://127.0.0.1:3306/springcloud_db02?serverTimezone=GMT%2B8
-      username: root
-      password: root
-      dbcp2:
-        min-idle: 5   #数据库连接池的最小维持连接数
-        initial-size: 5 #初始化连接数
-        max-total: 5  #最大连接数
-        max-wait-millis: 150  #等待连接获取的最大超时时间
+  profiles: prod  #生产环境
+  application: 
+    name: springcloud-config-product    #服务名
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource   
+    driver-class-name: com.mysql.jdbc.Driver   
+    url: jdbc:mysql://127.0.0.1:3306/springcloud_db02?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    dbcp2:
+      min-idle: 5   #数据库连接池的最小维持连接数
+      initial-size: 5 #初始化连接数
+      max-total: 5  #最大连接数
+      max-wait-millis: 150  #等待连接获取的最大超时时间
         
 eureka:
   client:
