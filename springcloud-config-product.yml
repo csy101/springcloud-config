@@ -36,7 +36,7 @@ eureka:
     instance-id: ${spring.application.name}:${server.port}  #这个配置是把路径中含有的主机名给换掉
     prefer-ip-address: true #这个配置可以让访问路径显示ip地址
 emp:
-  name: zhangsan
+  name: lisi
 ---  
 server:
   port: 8001              #端口号
