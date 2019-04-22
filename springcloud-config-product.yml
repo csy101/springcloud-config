@@ -11,7 +11,7 @@ mybatis:
 spring:
   profiles: dev
   application: 
-    name: springcloud-config-product-bus    #服务名
+    name: springcloud-config-product_bus    #服务名
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource   
     driver-class-name: com.mysql.jdbc.Driver   
