@@ -17,14 +17,14 @@ spring:
         service-name: service-product  # 注册到consul的服务名称。
         register: true   # 配置是否启动注册服务
 #        enable: true # 是否去发现其他服务
-        health-check-path: /actuator/health
-        health-check-interval: 15s  # consul 健康检查频率
-        tags:
-         - ureprefix-/serverName
-        instance-id: ${spring.application.name}:${server.port}
-        prefer-ip-address: true  # 访问路径可以显示ip
-        default-query-tag: ureprefix-/serverName   
-        query-passing: true  # true  则可返回所有健康检查通过的服务。
+#        health-check-path: /actuator/health
+#        health-check-interval: 15s  # consul 健康检查频率
+#        tags:
+#         - ureprefix-/serverName
+#        instance-id: ${spring.application.name}:${server.port}
+#        prefer-ip-address: true  # 访问路径可以显示ip
+#       default-query-tag: ureprefix-/serverName   
+#        query-passing: true  # true  则可返回所有健康检查通过的服务。
                 
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource    # 当前数据源操作类型
